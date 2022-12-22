@@ -42,7 +42,7 @@ variable "capacity" {
 variable "partition_count" {
   type        = number
   description = "Eventhub partition count"
-  default     = 2
+  default     = 1
 }
 
 variable "message_retention" {
@@ -52,13 +52,23 @@ variable "message_retention" {
 }
 
 variable "eventhub_topic" {
-  type        = map(any)
+  type = map(object({
+    partition_count   = optional(number),
+    message_retention = optional(number)
+    permissions       = optional(list(string))
+  }))
   description = "Map of eventhub topics"
   default     = {}
 }
 
 variable "default_namespace_auth_rule_permissions" {
-  type        = set(string)
+  type        = list(string)
   description = "Permissions to give Namespace Authorization Rule"
   default     = ["listen", "send", "manage"]
+  validation {
+    condition = alltrue([
+      for permission in var.default_namespace_auth_rule_permissions : contains(["listen", "send", "manage"], permission)
+    ])
+    error_message = "Only possible permissions are: listen, send, and manage"
+  }
 }
