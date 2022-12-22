@@ -4,7 +4,7 @@ resource "random_integer" "this" {
 }
 
 resource "azurerm_eventhub_namespace" "this" {
-  name                = "eventhub-${random_integer.this.result}-${var.project}-${var.env}-${var.location}"
+  name                = "evh-${random_integer.this.result}-${var.project}-${var.env}-${var.location}"
   location            = var.location
   resource_group_name = var.resource_group
   sku                 = var.sku
@@ -12,13 +12,12 @@ resource "azurerm_eventhub_namespace" "this" {
 }
 
 resource "azurerm_eventhub_namespace_authorization_rule" "this" {
-  name                = "eventhub-${var.project}-${var.env}-${var.location}"
+  name                = "evh-${var.project}-${var.env}-${var.location}"
   namespace_name      = azurerm_eventhub_namespace.this.name
   resource_group_name = var.resource_group
-
-  listen = contains(var.default_namespace_auth_rule_permissions, "listen")
-  send   = contains(var.default_namespace_auth_rule_permissions, "send")
-  manage = contains(var.default_namespace_auth_rule_permissions, "manage")
+  listen              = contains(var.default_namespace_auth_rule_permissions, "listen")
+  send                = contains(var.default_namespace_auth_rule_permissions, "send")
+  manage              = contains(var.default_namespace_auth_rule_permissions, "manage")
 }
 
 resource "azurerm_eventhub" "this" {
