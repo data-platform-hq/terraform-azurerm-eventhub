@@ -9,6 +9,7 @@ resource "azurerm_eventhub_namespace" "this" {
   resource_group_name = var.resource_group
   sku                 = var.sku
   capacity            = var.capacity
+  tags                = var.tags
 }
 
 resource "azurerm_eventhub_namespace_authorization_rule" "this" {
