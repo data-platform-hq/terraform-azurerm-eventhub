@@ -1,8 +1,8 @@
-# Azure Event Hubs Terraform module
-Terraform module for creation Azure Event Hubs
+# Azure Event Hub Terraform module
+Terraform module for creation Azure Event Hub
 
 ## Usage
-This module is provisioning Azure Event Hub namespace and topics. Below is an example that provisions single namespace with two topics whithin it.
+This module is provisioning Azure Event Hub namespace and topics. Below is an example that provisions single namespace with two topics within it.
 ```
 locals {
   eventhub_topic = {
@@ -70,13 +70,13 @@ No modules.
 
 ## Outputs
 
-| Name                                                                                                  | Description                                |
-|-------------------------------------------------------------------------------------------------------|--------------------------------------------|
-| <a name="output_connection_string"></a> [connection_string](#output\_connection\_string)              | Event Hub namespace connection string      |
-| <a name="output_name"></a> [name](#output\_name)                                                      | Event Hub namespace name                   |
-| <a name="output_namespace_primary_key"></a> [namespace_primary_key](#output\_namespace\_primary\_key) | Event Hub namespace shared access key      |
-| <a name="output_namespace_key_name"></a> [namespace_key_name](#output\_namespace\_key\_name)          | Event Hub namespace shared access key name |
-| <a name="output_namespace_endpoint"></a> [namespace_endpoint](#output\_namespace\_endpoint)           | Eventhub namespace endpoint                |
+| Name                                                                                                    | Description                                |
+|---------------------------------------------------------------------------------------------------------|--------------------------------------------|
+| <a name="output_connection_string"></a> [connection\_string](#output\_connection\_string)               | Event Hub namespace connection string      |
+| <a name="output_name"></a> [name](#output\_name)                                                        | Event Hub namespace name                   |
+| <a name="output_namespace_primary_key"></a> [namespace\_primary\_key](#output\_namespace\_primary\_key) | Event Hub namespace shared access key      |
+| <a name="output_namespace_key_name"></a> [namespace\_key\_name](#output\_namespace\_key\_name)          | Event Hub namespace shared access key name |
+| <a name="output_namespace_endpoint"></a> [namespace\_endpoint](#output\_namespace\_endpoint)            | Event Hub namespace endpoint               |
 <!-- END_TF_DOCS -->
 
 ## License
