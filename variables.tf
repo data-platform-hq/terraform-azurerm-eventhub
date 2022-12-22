@@ -19,16 +19,16 @@ variable "location" {
   description = "Azure location"
 }
 
-variable "tags" {
-  type        = map(any)
-  description = "A mapping of tags to assign to the resource"
-  default     = {}
-}
-
 variable "sku" {
   type        = string
   default     = "Standard"
   description = "sku"
+}
+
+variable "tags" {
+  type        = map(any)
+  description = "A mapping of tags to assign to the resource"
+  default     = {}
 }
 
 # Optional
@@ -58,7 +58,7 @@ variable "eventhub_topic" {
 }
 
 variable "default_namespace_auth_rule_permissions" {
-  type = set(string)
+  type        = set(string)
   description = "Permissions to give Namespace Authorization Rule"
   default     = ["listen", "send", "manage"]
 }

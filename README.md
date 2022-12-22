@@ -2,30 +2,14 @@
 Terraform module for creation Azure Event Hubs
 
 ## Usage
-By default, this module will provision one event hub namespace without event hub topics. for creating event hub topic, necessary to  write in variable eventhub_topics at at environment file
+By default, this module will provision one event hub namespace without event hub topics. For creating event hub topics, necessary to fill them in variable _**"eventhub_topics"**_ at at terraform environment file.
 
-```
-#Eventhub
-eventhub_enabled = false
-eventhub_topics = {
-  db-history-topic = { partition_count = "1", message_retention = 7, permissions = ["listen","send","manage"] }
-}
-
-# Debezium
-debezium_enabled = false
-# Debezium Encryption key
-debezium_encryption_key = false
-debezium_mssql_db_name = "WideWorldImporters-Standard"
-debezium_mssql_tables = ["Warehouse.Colors", "Purchasing.Suppliers", "Warehouse.StockItems", "Warehouse.StockItems"]
-container_group_object_id = "8120c8cf-c03f-4bb8-b319-603a3ab38e4d"
-
-```
 <!-- BEGIN_TF_DOCS -->
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3.6 |
-| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | >= 3.24.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >=  1.0.0 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | >= 3.23.0|
 
 ## Providers
 
@@ -67,11 +51,11 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_connection_string"></a> [connection_string](#output\_connection_string) |Azurerm eventhub namespace authorization rule |
+| <a name="output_connection_string"></a> [connection_string](#output\_connection_string) |Azurerm eventhub namespace connection string |
 | <a name="output_name"></a> [name](#output\_name) | Azurerm eventhub namespace name |
-| <a name="output_access-primary-key"></a> [access-primary-key](#output\_access-primary-key) | Eventhub primary key |
-| <a name="output_access-key-name"></a> [access-primary-key](#output\_access-primary-key) | Eventhub shared access key name |
-| <a name="output_access-endpoint"></a> [access-endpoint](#output\_access-endpoint) | Eventhub shared access key name |
+| <a name="output_namespace-primary-key"></a> [namespace-primary-key](#output\_namespace-primary-key) | Eventhub namespace primary key |
+| <a name="output_namespace-key-name"></a> [namespace-key-name](#output\_namespace-key-name) | Eventhub namespace key name |
+| <a name="output_namespace-endpoint"></a> [namespace-endpoint](#output\_namespace-endpoint) | Eventhub namespace endpoint |
 <!-- END_TF_DOCS -->
 
 ## License
