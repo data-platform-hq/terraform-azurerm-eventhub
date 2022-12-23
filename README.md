@@ -2,12 +2,13 @@
 Terraform module for creation Azure Event Hub
 
 ## Usage
-This module is provisioning Azure Event Hub namespace and topics. Below is an example that provisions single namespace with two topics within it.
+This module is provisioning Azure Event Hub namespace and topics. Below is an example that provisions single namespace with three topics within it.
 ```
 locals {
   eventhub_topic = {
     topic-1 = { partition_count = 1, message_retention = 7, permissions = ["listen","send","manage"] }
     topic-2 = { partition_count = 1, message_retention = 3, permissions = ["listen"] }
+    topic-3 = { partition_count = 1, message_retention = 3, permissions = ["listen", "send"] }
   }
   tags = {
     environment = "development"
