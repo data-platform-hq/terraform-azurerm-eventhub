@@ -9,6 +9,9 @@ locals {
     topic-1 = { partition_count = 1, message_retention = 7, permissions = ["listen","send","manage"] }
     topic-2 = { partition_count = 1, message_retention = 3, permissions = ["listen"] }
   }
+  tags = {
+    environment = "development"
+  }
 }
 
 module "eventhub" {
@@ -17,9 +20,9 @@ module "eventhub" {
   project        = "datahq"
   env            = "dev"
   location       = "eastus"
-  tags           = var.tags
-  resource_group = module.resource_group.name # also possible to pass already existing name
-  eventhub_topic = locals.eventhub_topic
+  tags           = local.tags
+  resource_group = "example"
+  eventhub_topic = local.eventhub_topic
 }
 ```
 
