@@ -3,7 +3,7 @@ output "connection_string" {
   description = "Event Hub namespace connection string"
 }
 
-output "name" {
+output "namespace_name" {
   value       = azurerm_eventhub_namespace.this.name
   description = "Event Hub namespace name"
 }
