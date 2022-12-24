@@ -1,3 +1,11 @@
+## [1.0.2](https://github.com/data-platform-hq/terraform-azurerm-eventhub/compare/v1.0.1...v1.0.2) (2022-12-24)
+
+
+### Bug Fixes
+
+* updated naming ([111ff8a](https://github.com/data-platform-hq/terraform-azurerm-eventhub/commit/111ff8a6a69c9c573ce07c9b9c69d5b2012d98b1))
+* updated output var naming ([61fa12d](https://github.com/data-platform-hq/terraform-azurerm-eventhub/commit/61fa12d43c2b110dd37941496ee2b065d1aece2d))
+
 ## [1.0.1](https://github.com/data-platform-hq/terraform-azurerm-eventhub/compare/v1.0.0...v1.0.1) (2022-12-23)
 
 
