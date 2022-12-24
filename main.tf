@@ -13,7 +13,7 @@ resource "azurerm_eventhub_namespace" "this" {
 }
 
 resource "azurerm_eventhub_namespace_authorization_rule" "this" {
-  name                = "evh-${var.project}-${var.env}-${var.location}"
+  name                = "rule-${var.project}-${var.env}-${var.location}"
   namespace_name      = azurerm_eventhub_namespace.this.name
   resource_group_name = var.resource_group
   listen              = contains(var.default_namespace_auth_rule_permissions, "listen")
@@ -34,7 +34,7 @@ resource "azurerm_eventhub" "this" {
 resource "azurerm_eventhub_authorization_rule" "this" {
   for_each = length(var.eventhub_topic) == 0 ? {} : var.eventhub_topic
 
-  name                = "access-${random_integer.this.result}-${var.project}-${var.env}-${var.location}"
+  name                = "rule-${each.key}-${var.project}-${var.env}-${var.location}"
   namespace_name      = azurerm_eventhub_namespace.this.name
   eventhub_name       = azurerm_eventhub.this[each.key].name
   resource_group_name = var.resource_group

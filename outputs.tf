@@ -1,4 +1,4 @@
-output "connection_string" {
+output "namespace_connection_string" {
   value       = azurerm_eventhub_namespace_authorization_rule.this.primary_connection_string
   description = "Event Hub namespace connection string"
 }

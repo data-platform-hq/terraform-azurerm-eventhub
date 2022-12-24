@@ -76,7 +76,7 @@ No modules.
 
 | Name                                                                                                    | Description                                |
 |---------------------------------------------------------------------------------------------------------|--------------------------------------------|
-| <a name="output_connection_string"></a> [connection\_string](#output\_connection\_string)               | Event Hub namespace connection string      |
+| <a name="output_namespace_connection_string"></a> [namespace\_connection\_string](#output\_namespace\_connection\_string)               | Event Hub namespace connection string      |
 | <a name="output_namespace_name"></a> [namespace\_name](#output\_namespace\_name)                                                        | Event Hub namespace name                   |
 | <a name="output_namespace_primary_key"></a> [namespace\_primary\_key](#output\_namespace\_primary\_key) | Event Hub namespace shared access key      |
 | <a name="output_namespace_key_name"></a> [namespace\_key\_name](#output\_namespace\_key\_name)          | Event Hub namespace shared access key name |
