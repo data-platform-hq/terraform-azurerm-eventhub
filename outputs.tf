@@ -31,4 +31,5 @@ output "topic" {
       primary_connection_string = azurerm_eventhub_authorization_rule.this[topic].primary_connection_string
     }
   }
+  description = "Topic map of parameters"
 }
