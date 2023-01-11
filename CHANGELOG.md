@@ -1,3 +1,13 @@
+## [1.0.3](https://github.com/data-platform-hq/terraform-azurerm-eventhub/compare/v1.0.2...v1.0.3) (2023-01-11)
+
+
+### Bug Fixes
+
+* added description to topic output ([5ca34b0](https://github.com/data-platform-hq/terraform-azurerm-eventhub/commit/5ca34b019e4b21c68d1d0585e0b32bfe1d9341cd))
+* added topics output ([de55559](https://github.com/data-platform-hq/terraform-azurerm-eventhub/commit/de555591a1147a1d136c8e98276850d585e124d3))
+* string literal ([c244e74](https://github.com/data-platform-hq/terraform-azurerm-eventhub/commit/c244e74e13096d2efcf7cb980775e1db04bc6d7c))
+* updated condition on topic ([a04a4c4](https://github.com/data-platform-hq/terraform-azurerm-eventhub/commit/a04a4c4bb0bdbbb4541f397099bef2c26dfcf522))
+
 ## [1.0.2](https://github.com/data-platform-hq/terraform-azurerm-eventhub/compare/v1.0.1...v1.0.2) (2022-12-24)
 
 
