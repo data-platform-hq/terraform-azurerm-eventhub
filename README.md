@@ -69,7 +69,7 @@ No modules.
 | <a name="input_capacity"></a> [capacity](#input\_capacity)                                                                                                      | Event Hub namespace capacity                                                   | `number`        | 1                            |    no    |
 | <a name="input_partition_count"></a> [partition\_count](#input\_partition\_count)                                                                               | Event Hub partition count                                                      | `number`        | 2                            |    no    |
 | <a name="input_message_retention"></a> [message\_retention](#input\_message\_retention)                                                                         | Number of days to retain the events                                            | `number`        | 1                            |    no    |
-| <a name="input_eventhub_topic"></a> [eventhub\_topic](#input\_eventhub\_topic)                                                                                  | Map of Event Hub topics                                                        | `map(any)`      | {}                           |    no    |
+| <a name="input_eventhub_topic"></a> [eventhub\_topic](#input\_eventhub\_topic) | Map of Event Hub topics | <pre>map(object({<br> partition_count   = optional(number) <br> message_retention = optional(number) <br> permissions       = optional(list(string)) <br>}))</pre> | {} |    no    |
 | <a name="input_default_namespace_auth_rule_permissions"></a> [default\_namespace\_auth\_rule\_permissions](#input\_default\_namespace\_auth\_rule\_permissions) | Permissions to give Namespace Authorization Rule                               | `list(string)`  | ["listen", "send", "manage"] |    no    |
 
 ## Outputs
@@ -81,6 +81,7 @@ No modules.
 | <a name="output_namespace_primary_key"></a> [namespace\_primary\_key](#output\_namespace\_primary\_key) | Event Hub namespace shared access key      |
 | <a name="output_namespace_key_name"></a> [namespace\_key\_name](#output\_namespace\_key\_name)          | Event Hub namespace shared access key name |
 | <a name="output_namespace_endpoint"></a> [namespace\_endpoint](#output\_namespace\_endpoint)            | Event Hub namespace endpoint               |
+| <a name="output_topic"></a> [topic](#output\_topic) | Topic map of parameters |
 <!-- END_TF_DOCS -->
 
 ## License

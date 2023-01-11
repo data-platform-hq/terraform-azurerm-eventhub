@@ -22,7 +22,7 @@ resource "azurerm_eventhub_namespace_authorization_rule" "this" {
 }
 
 resource "azurerm_eventhub" "this" {
-  for_each = var.eventhub_topic
+  for_each = length(var.eventhub_topic) == 0 ? {} : var.eventhub_topic
 
   name                = "${each.key}-${var.project}-${var.env}-${var.location}"
   namespace_name      = azurerm_eventhub_namespace.this.name
