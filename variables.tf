@@ -18,6 +18,30 @@ variable "location" {
   description = "Azure region"
 }
 
+variable "custom_namespace_name" {
+  type        = string
+  description = "Specifies the name of the EventHub Namespace resource"
+  default     = null
+}
+
+variable "custom_topic_name" {
+  type        = string
+  description = "Specifies the name of the EventHub resource"
+  default     = null
+}
+
+variable "custom_namespace_auth_rule_name" {
+  type        = string
+  description = "Specifies the name of the Namespace Authorization Rule"
+  default     = null
+}
+
+variable "custom_topic_auth_rule_name" {
+  type        = string
+  description = "Specifies the name of the EventHub Authorization Rule resource"
+  default     = null
+}
+
 variable "sku" {
   type        = string
   default     = "Standard"
