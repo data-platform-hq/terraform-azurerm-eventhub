@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/data-platform-hq/terraform-azurerm-eventhub/compare/v1.0.3...v1.1.0) (2023-03-08)
+
+
+### Bug Fixes
+
+* updated provider ([574a1a3](https://github.com/data-platform-hq/terraform-azurerm-eventhub/commit/574a1a325562f5df09cdea07af2a1510d0291bcc))
+
+
+### Features
+
+* added custom names for resources ([e53f0f4](https://github.com/data-platform-hq/terraform-azurerm-eventhub/commit/e53f0f40375abd3add8111ee6a97619370de2ff6))
+
 ## [1.0.3](https://github.com/data-platform-hq/terraform-azurerm-eventhub/compare/v1.0.2...v1.0.3) (2023-01-11)
 
 
