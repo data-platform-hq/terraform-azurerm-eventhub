@@ -3,7 +3,7 @@ Terraform module for creation Azure Event Hub
 
 ## Usage
 This module is provisioning Azure Event Hub namespace and topics. Below is an example that provisions single namespace with three topics within it.
-```
+```hcl
 locals {
   eventhub_topic = {
     topic-1 = { partition_count = 1, message_retention = 7, permissions = ["listen","send","manage"] }
@@ -32,14 +32,14 @@ module "eventhub" {
 | Name                                                                      | Version   |
 | ------------------------------------------------------------------------- | --------- |
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0  |
-| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm)       | >= 3.23.0 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm)       | >= 3.40.0 |
 | <a name="requirement_random"></a> [random](#requirement\_random)          | >= 3.4.3  |
 
 ## Providers
 
 | Name                                                          | Version   |
 | ------------------------------------------------------------- | --------- |
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | >= 3.24.0 |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | >= 3.40.0 |
 | <a name="requirement_random"></a> [random](#provider\_random) | >= 3.4.3  |
 
 ## Modules
